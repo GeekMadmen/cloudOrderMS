@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet" />
@@ -29,7 +28,6 @@
   
 <script type="text/javascript">
 function toPrint(){
-
         var d = dialog({
             width : 700,
             height : 400,
@@ -62,21 +60,14 @@ function toPrint(){
     </div>
     
     <div class="formbody">
-    
-    
-    <div id="usual1" class="usual"> 
-    
-    
-    
-    <ul class="seachform1">
-    <li><label>订单号码:</label>
-        <input name="" type="text" class="scinput1" />
-    </li>
-    
 
-        <li class="sarchbtn"><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
-    
-    </ul>
+    <div id="usual1" class="usual">
+        <ul class="seachform1">
+            <li><label>订单号码:</label>
+                <input name="" type="text" class="scinput1" />
+            </li>
+            <li class="sarchbtn"><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+        </ul>
 
     <script language="javascript">
 	$(document).ready(function() 
@@ -93,13 +84,14 @@ function toPrint(){
         }    
     }); 
 });
-    /*隐藏订单信息，只有当打开开关键时才会出现列表显示*/
+    /*隐藏订单信息，只有当打开开关键时才会出现列表显示
+    * 代码没有完成，当开关打开时需要传递数据给后台，后台确认开启订单，前台开始接收订单。
+    * 在上边出现弹出订单，页面时时更新angular.js
+    * */
+
 function tobrown(){
 document.getElementById("tablelist");
-
-
 }
-	
 	</script>
         <ul class="seachform1">
             <li><label>是否营业:</label></li>
@@ -108,10 +100,8 @@ document.getElementById("tablelist");
                     <input type="checkbox" id="checkbox-11-2"  /><label for="checkbox-11-2" checked  onclick="tobrown()"></label>
                 </div>
             </div>
-
         </ul>
-
-       <!-- </div>-->
+       <!-- 需要在后台接收订单数据，通过angular.js显示出来-->
         <table class="tablelist" id="tablelist">
             <thead>
             <tr>
