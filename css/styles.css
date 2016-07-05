@@ -1,0 +1,46 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 62.5%;
+	font-family: Arial, sans-serif;
+}
+
+label {
+	display: inline;
+}
+
+.holder {
+	width: 100%;
+	/*background: #f9f9f9;*/
+	margin: 0px auto;
+	padding: 10px 0;
+	font-size: 1em;
+}
+
+.center {
+	margin: 0px auto;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.top-content {
+	padding: 40px 0;
+}
+/*h1 {
+	font-size: 3em;
+	font-family: 'adelle-sans', sans-serif;
+	text-align: center;
+}*/
+
+p {
+	font-size: 2em;
+	font-family: 'adelle-sans', sans-serif;
+	text-align: center;
+	color: #bbb;
+}
+
+/* ==================================================================== */
+/* CHECKBOX TYPE 1 ---------------------------------------------------- */
+/* ==================================================================== */

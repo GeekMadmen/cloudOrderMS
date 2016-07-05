@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="artDialog/css/ui-dialog.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+    <script type="text/javascript" src="artDialog/jquery.js"></script>
+    <script language="JavaScript" src="artDialog/dist/dialog-plus.js"></script>
+    <script language="JavaScript" src="artDialog/artDialogClose.js"></script>
+
+<!--<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>-->
+  
+<script type="text/javascript">
+function toPrint() {
+    var d = dialog({
+        width : 400,
+        height : 300,
+        title : '打印订单',
+        url : 'printOrder.html',//可以是一个访问路径Action|Servlet等或者jsp页面资源
+        /* onclose : function() {
+         if (this.returnValue) {
+         if (this.returnValue == "success") {
+         window.location.reload();
+         }
+         }
+
+         }*/
+    });
+    d.showModal();
+}
+</script>
+</head>
+
+<body class="sarchbody">
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">统计</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    
+    
+    <ul class="seachform3">
+    <li><label>档口：</label>
+    <select>
+    <option>全部</option>
+    <option>其他</option>
+    </select>
+
+    </li>
+    
+    <li><label>按年份:</label>
+    <select>
+    <option>全部</option>
+    <option>其他</option>
+    </select>
+    </li>
+        <li><label>按月份:</label>
+                <select>
+                    <option>全部</option>
+                    <option>一月</option>
+                    <option>二月</option>
+                    <option>三月</option>
+                    <option>四月</option>
+                    <option>五月</option>
+                    <option>六月</option>
+                    <option>七月</option>
+                    <option>八月</option>
+                    <option>九月</option>
+                    <option>十月</option>
+                    <option>十一月</option>
+                    <option>十二月</option>
+                    <option>无</option>
+                </select>
+        </li>
+        <li class="sarchbtn"><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+        <li class="sarchbtn"><label>&nbsp;</label><input name="" type="button" class="scbtn2" value="一键打印" onclick="toPrint()"/></li>
+    </ul>
+
+    
+   <!-- <ul class="seachform1">
+
+    </ul>-->
+    
+    <script language="javascript">
+	$(document).ready(function() 
+{ 
+    $(".scbtn1").click(function() 
+    {      
+        if( $(".seachform2").hasClass("hideclass") ) 
+        { 
+            $(".seachform2").removeClass("hideClass"); 
+        } 
+        else 
+        { 
+            $(".seachform2").addClass("hideClass"); 
+        }    
+    }); 
+}); 
+
+	
+	</script>
+    
+    
+
+
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>订单号<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>菜品</th>
+        <th>价格</th>
+        <th>备注</th>
+        <th>订单时间</th>
+        <th>支付方式</th>
+        <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130908</td>
+        <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
+        <td>admin</td>
+        <td>江苏南京</td>
+        <td>2013-09-09 15:05</td>
+        <td>已审核</td>
+        <td><a href="#" class="tablelink" onclick="toPrint()">打印</a>     </td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>温州19名小学生中毒流鼻血续：周边部分企业关停</td>
+        <td>uimaker</td>
+        <td>山东济南</td>
+        <td>2013-09-08 14:02</td>
+        <td>未审核</td>
+        <td><a href="#" class="tablelink">打印</a>     </td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130906</td>
+        <td>社科院:电子商务促进了农村经济结构和社会转型</td>
+        <td>user</td>
+        <td>江苏无锡</td>
+        <td>2013-09-07 13:16</td>
+        <td>未审核</td>
+            <td><a href="#" class="tablelink">打印</a>     </td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130905</td>
+        <td>江西&quot;局长违规建豪宅&quot;：局长检讨</td>
+        <td>admin</td>
+        <td>北京市</td>
+        <td>2013-09-06 10:36</td>
+        <td>已审核</td>
+            <td><a href="#" class="tablelink">打印</a>     </td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>20130907</td>
+        <td>温州19名小学生中毒流鼻血续：周边部分企业关停</td>
+        <td>uimaker</td>
+        <td>山东济南</td>
+        <td>2013-09-08 14:02</td>
+        <td>未审核</td>
+            <td><a href="#" class="tablelink">打印</a>     </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+
+
+    <div class="pagin">
+        <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+        <ul class="paginList">
+            <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+            <li class="paginItem"><a href="javascript:;">1</a></li>
+            <li class="paginItem current"><a href="javascript:;">2</a></li>
+            <li class="paginItem"><a href="javascript:;">3</a></li>
+            <li class="paginItem"><a href="javascript:;">4</a></li>
+            <li class="paginItem"><a href="javascript:;">5</a></li>
+            <li class="paginItem more"><a href="javascript:;">...</a></li>
+            <li class="paginItem"><a href="javascript:;">10</a></li>
+            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
