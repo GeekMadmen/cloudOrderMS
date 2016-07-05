@@ -2,26 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>信息管理系统-uimaker.com</title>
+<title>欢迎登录后台管理系统</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="js/jquery.js"></script>
+<script src="js/cloud.js" type="text/javascript"></script>
 
 <script language="javascript">
 	$(function(){
-    $('.loginbox0').css({'position':'absolute','left':($(window).width()-810)/2});
+    $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
 	$(window).resize(function(){  
-    $('.loginbox0').css({'position':'absolute','left':($(window).width()-810)/2});
+    $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
     })  
 });  
-</script> 
-
+</script>
 </head>
-
-<body style="background-color:#df7611; background-image:url(images/light1.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
-
-
-<div class="logintop">    
-    <span>欢迎进入信息管理系统</span>    
+<body style="background-color:#df7611; background-image:url(images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+    <div id="mainBody">
+      <div id="cloud1" class="cloud"></div>
+      <div id="cloud2" class="cloud"></div>
+    </div>  
+<div class="logintop">
+    <span>欢迎登录后台管理界面平台</span>    
     <ul>
     <li><a href="#">回首页</a></li>
     <li><a href="#">帮助</a></li>
@@ -29,17 +30,16 @@
     </ul>    
     </div>
     
-    <div class="loginbody1">
+    <div class="loginbody">
     
     <span class="systemlogo"></span> 
        
-    <div class="loginbox0">
+    <div class="loginbox">
     
-    <ul class="loginlist">
-    <li><a href="login1.html"><img src="images/l01.png"  alt="电子监察系统"/><p>教育电子监察<br />管理系统</p></a></li>
-    <li><a href="login2.html"><img src="images/l02.png"  alt="电子监察系统"/><p>高校采购与招标<br />管理系统</p></a></li>
-    <li><a href="login3.html"><img src="images/l03.png"  alt="电子监察系统"/><p>高校科研经费<br />管理系统统</p></a></li>
-    <li><a href="login4.html"><img src="images/l04.png"  alt="电子监察系统"/><p>教育信息化建设工程<br />项目管理系统</p></a></li>
+    <ul>
+    <li><input name="" type="text" class="loginuser" value="admin" onclick="JavaScript:this.value=''"/></li>
+    <li><input name="" type="text" class="loginpwd" value="密码" onclick="JavaScript:this.value=''"/></li>
+    <li><input name="" type="button" class="loginbtn" value="登录"  onclick="javascript:window.location='main.html'"  /><label><input name="" type="checkbox" value="" checked="checked" />记住密码</label><label><a href="#">忘记密码？</a></label></li>
     </ul>
     
     
@@ -47,7 +47,9 @@
     
     </div>
     
-    <div class="loginbm">版权所有  2014&nbsp;&nbsp;&nbsp; <strong>uimaker.com</strong> &nbsp;&nbsp;&nbsp;仅供学习交流，勿用于任何商业用途</div>
+    
+    
+    <div class="loginbm">版权所有  2014  <a href="http://www.uimaker.com">uimaker.com</a>  仅供学习交流，勿用于任何商业用途</div>
 	
     
 </body>
