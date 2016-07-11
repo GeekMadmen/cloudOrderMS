@@ -50,15 +50,15 @@
     <span class="systemlogo"></span>
     <div class="loginbox loginbox3" ng-controller="loginCtrl">
         <ul>
-            <li><input name="" type="text" class="loginuser" placeholder="admin"/></li>
-            <li><input name="" type="text" class="loginpwd" placeholder="密码"/></li>
+            <li><input name="" ng-model="username" type="text" class="loginuser" placeholder="用户名"/></li>
+            <li><input name="" ng-model="password" type="password" class="loginpwd" placeholder="密码"/></li>
             <li class="yzm">
                 <!-- 数据库获取数据，点击长春大学获取相应的食堂名称-->
                 <select class="check" ng-model="selectSchool" ng-click="choose()">
                     <option ng-repeat="school in schools" value="{{school.schoolid}}">{{school.name}}</option>
                 </select>
-                <select class="check">
-                    <option ng-repeat="canteen in canteens | orderBy:'name'">{{canteen.name}}</option>
+                <select class="check" ng-model="selectCanteen">
+                    <option ng-repeat="canteen in canteens | orderBy:'name'" value="{{canteen.canteenid}}">{{canteen.name}}</option>
                 </select>
             </li>
             <li>
@@ -83,6 +83,15 @@
                         $scope.canteens = response;
                     });
         };
+        $scope.login = function () {
+            var l = {};
+            l.username = $scope.username;
+            l.password = $scope.password;
+            l.selectSchool = $scope.selectSchool;
+            l.selectCanteen = $scope.selectCanteen;
+
+            alert(JSON.stringify(l));
+        }
     });
 
     //    javascript:window.location='main.html'
